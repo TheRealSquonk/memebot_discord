@@ -17,7 +17,13 @@ This template repository requires a `.env` file to pass variables to your applic
 This template repository has a sample .env file, `.env-sample`, that you can rename to `.env` or copy and paste the variables in `.env-sample` into a new `.env` file. 
 
 ### Step 2: Add your favorite meme
-In your `.env` file you will find a variable named `MEME_URL` where you can add a URL to your favorite meme. 
+In your `.env` file, set `MEME_URL` to one or more direct image URLs, separated by commas. For example:
+
+```env
+MEME_URL=https://example.com/meme1.jpg,https://example.com/meme2.jpg
+```
+
+The bot randomly selects a meme for each new member and avoids showing the same meme twice in a row when multiple URLs are configured.
 
 ### Step 3: Add a personalized welcome message
 In the `src` directory you will find another directory called `events`. Open the `events` directory and you will find the `guildMemberAdd.js` file. You'll notice that we left helpful comments on where you can update the code to your liking.
@@ -74,5 +80,4 @@ Visit the generated url from the previous step and choose the server that you wa
 Once the bot is added it will appear on your Discord server in offline mode.
 
 You can now run the code in the repository using the command line by typing the command `npm start`. 
-
 
